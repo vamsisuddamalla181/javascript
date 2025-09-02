@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>arthmetic operations</title>
 </head>
+
 <body>
     <label>First</label>
     <input type="text" placeholder="Enter first Number" id="first">
@@ -19,7 +21,81 @@
     <button onclick="mulnumber(first.value,second.value)">mul</button>
     <button onclick="divnumber(first.value,second.value)">div</button>
     <label id="result"></label>
-    <script src="./sample.js"></script>
 
+    <hr>
+    <p id="str">
+    </p>
+    <hr>
+    <p id="number"></p>
+    <hr>
+    <p id="math">
+        <label for="mathf">Math</label>
+        <input type="text" id="mathf">
+        <button id="b12">click</button>
+        <label id="res"></label>
+    <div>
+        </p>
+
+        This is the sample para
+        </p>
+        <ul>
+            <li>apple</li>
+            <li>banana</li>
+            <li>orange</li>
+        </ul>
+    </div>
+
+    <button onclick="z()">submit</button>
+    <hr>
+    <form onsubmit="hyd(event)">
+        <h2>Enter a age between 1 to 10</h2>
+        <input id="in"><button type="submit">submit</button>
+        <p id="outt"></p>
+
+    </form>
+
+    <script>
+        let c = [[1, 2], [2, 3], [3, 4]]
+        let d = [3, 4, 5, 6]
+        let m = ["vamsi", "Krishna", "Naidu"]
+        let f = m.toSpliced(2, 0, "suddamalla", "dwd")
+        document.getElementById("str").innerHTML = m
+
+
+
+        const born = new Date()
+        document.getElementById("number").innerHTML = born.getMilliseconds()
+
+ 
+
+        const num = 10.234
+        documnet.getElementById("math").innerHTML = Math.round(num)
+
+
+        function z() {
+            const sss = document.querySelectorAll("div")
+            for (let i = 0; i < sss.length; i++) {
+                sss[i].style.color = "red"
+            }
+        }
+
+
+        function hyd(event){
+            event.preventDefault();
+            let w=document.getElementById("in").value
+            let q;
+            if(isNaN(w)||w<1 ||w>10)
+            {
+                q="not valid"
+            }
+            else{
+                q="valid"
+            }
+            document.getElementById("outt").innerHTML=q
+            console.log(q)
+        }
+    </script>
+    <script src="./sample.js"></script>
 </body>
+
 </html>
